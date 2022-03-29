@@ -103,20 +103,56 @@ html {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
+  padding: 0 2em;
   color: white;
   font-size: 1.25em;
   height: 100%;
+  display:flex;
+  justify-content: center;
 }
 
-.wrapper {
+header,
+footer {
+/*set display to flex and center content vertically and horizontally  */
+display: flex;
+justify-content: flex-start;
+align-items: center;
+  background-color: #222;
+  height: 80px;
+  width: 100%;
+
+  font-size: 2em;
+}
+
+main {
+  /*set display to flex and center content vertically and horizontally  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #ccc;*/
+  height: 250px;
+  width: 100%;
+
+}
+
+main p {
+  font-size: 1.35em;
+}
+
+.flex-container {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
+
   justify-content: space-between;
+  
   /*font-weight: 700;*/
+  /* wrap the content so it is not all in one line */
+  flex-flow: row wrap;
+  /* add spaces between the flex items in the divs */
+  max-width: 1200px;
 }
 
-.div-1, .div-2, .div-3 {
+.flex-item {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
   justify-content: center;
@@ -127,6 +163,15 @@ body {
   /*background-color: #f16059;*/
   height: 300px;
   width: 30%;
+
+}
+
+footer {
+  border-top: 1px solid #fff;
+}
+
+footer i {
+  padding: 30px 20px 0 0;
 }
 
 
